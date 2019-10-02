@@ -188,6 +188,6 @@ def pisaDocument(src, dest=None, path=None, link_callback=None, debug=0,
 
     data = out.getvalue()
 
-    context.dest.write(data.decode())  # TODO: context.dest is a tempfile as well...
+    context.dest.write(data.decode('utf-8', 'ignore'))  # TODO: context.dest is a tempfile as well...
 
     return context
